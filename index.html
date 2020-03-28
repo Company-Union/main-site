@@ -14,41 +14,22 @@
         line-height: 1.8;
         }
         
-        .brand-colour{
-            background-color:#a18cd1
-        }
-        /* Create a Parallax Effect */
-        .bgimg-1 {
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        }
-        
-        /* First image (Logo. Full height) */
+        /* First image (Full height) */
         .bgimg-1 {
         min-height: 100%;
         background-image: linear-gradient(to top,  #f1f1f1 0%, #a18cd1 100%);
         }
-        /* First image (Logo. Full height) */
+        /* Second image (Full height) */
         .bgimg-2 {
-        background: #f1f1f1;
-        background: -moz-linear-gradient(top, #f1f1f1 0%, #a18cd1 37%, #a18cd1 100%);
-        background: -webkit-linear-gradient(top, #f1f1f1 0%,#a18cd1 37%,#a18cd1 100%);
-        background: linear-gradient(to bottom, #f1f1f1 0%,#a18cd1 37%,#a18cd1 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#a18cd1',GradientType=0 );
+            min-height: 100%;
+            background-image: linear-gradient(to top, #a18cd1 0%, #f1f1f1 100%);
+        }
+        .bgimg-3 {
+            background-color: #a18cd1;
         }
           
         .w3-wide {letter-spacing: 10px;}
         .w3-hover-opacity {cursor: pointer;}
-        
-        /* Turn off parallax scrolling for tablets and phones */
-        @media only screen and (max-device-width: 1600px) {
-        .bgimg-1 {
-            background-attachment: scroll;
-            min-height: 400px;
-        }
-        }
         </style>
 	</head>
     <body class="w3-light-grey">
@@ -63,7 +44,7 @@
         </div>
         
         <!-- Container (Content) -->
-        <div class="w3-content w3-container w3-padding-64" id="content">
+        <div class="w3-content w3-container w3-padding-64 bgimg-2" id="content">
 			<div class="w3-container w3-white w3-text-black">
 				<h2>About Us</h2>
 				
@@ -91,35 +72,16 @@
         
 	
   <!-- Footer -->
-  <footer class="w3-center w3-padding-16 bgimg-2">
+  <footer class="w3-center w3-padding-16 bgimg-3">
   <p class="w3-text-white">‎‎</p>
   <p class="w3-text-white">© Amy & Peyton's, 2020</p>
   <p class="w3-text-white">Site by Amy</p>
   <p class="w3-text-white">‎‎</p>
-  <a href="#home" class="w3-button w3-light-grey w3-padding-4"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <a href="#home" class="w3-button w3-white w3-padding-4"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <p class="w3-text-white">‎‎</p>
   </footer>
   
   <script>
-  
-	var slideIndex = 1;
-	showDivs(slideIndex);
-	
-	function plusDivs(n) {
-	  showDivs(slideIndex += n);
-	}
-	
-	function showDivs(n) {
-	  var i;
-	  var x = document.getElementsByClassName("slideshow");
-	  if (n > x.length) {slideIndex = 1}
-	  if (n < 1) {slideIndex = x.length} ;
-	  for (i = 0; i < x.length; i++) {
-	    x[i].style.display = "none";
-	  }
-	  x[slideIndex-1].style.display = "block";
-	}
-
         // Change style of navbar on scroll
         window.onscroll = function() {myFunction()};
         function myFunction() {
